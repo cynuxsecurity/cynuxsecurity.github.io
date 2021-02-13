@@ -1,0 +1,13 @@
+# Site settings
+sass:
+    sass_dir: _sass
+    style: compact
+
+collections:
+  packages:
+    output: true
+  mirrors:
+    output: false
+include: [strap.sh]
+plugins:
+  - jekyll-sitemap

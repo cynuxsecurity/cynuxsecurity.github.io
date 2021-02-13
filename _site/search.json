@@ -1,0 +1,12 @@
+[
+  {
+    "title": "Mirror in US","type": "post","categories": [{"name": "mirror"}],
+    "description": "Mirror is available at http://mirror.cynuxsecurity.org",
+    "url": "/mirror/2021/02/10/new-mirror.html"
+  },
+  {
+    "title": "ISO and OVA release","type": "post","categories": [{"name": "iso"}],
+    "description": "Today we released the new CynuxSecurity Linux ISOs and OVA image. For details see the ChangeLog below.Here’s the ChangeLog:New GUI installerupdated cynuxsecurity-installer to v0.1updated all cynuxsecurity tools and packages including config filesupdated all system packagesupdated UIWe wish to thank all of CynuxSecurity’s users, mirrors, and supporters. Thanks for your help.",
+    "url": "/iso/2021/01/20/iso-released.html"
+  }
+]

@@ -1,0 +1,122 @@
+---
+layout: default
+title: Download CynuxSecurity
+subtitle: CynuxSecurity iso
+seo: Downloads the netinstall or the live iso by torrent, http or ftp
+id: downloads
+icon: fa-download
+nav: true
+position: 1
+permalink: download.html
+tabs:
+ - name: LiveISOs
+   link: iso-download
+ - name: OVA Images
+   link: ova-download
+ - name: Mirrors
+   link: mirror-list
+description: Here you will find official CynuxSecurity downloads and installation instructions.
+---
+<div class="section">
+    <div class="container">
+        <a class="anchor" id="iso-download"></a>
+        <h5 class="header red-text">Live ISOs</h5>
+        <p itemprop="about">
+            The following list contains official CynuxSecurity live and netinstall ISO images. You can burn these images to
+            DVDs and flashdrives.
+            The live ISO contains a complete, functional CynuxSecurity system. The netinstall ISO is a lightweight image
+            for bootstrapping machines.
+            If possible, please try to use a mirror near you to download the ISOs. You can find a <a href="#mirror-list">list
+                of mirrors</a> below.
+        </p>
+        <table class="table">
+            <tr>
+                <th>Image</th>
+                <th class="hide-on-med-down">Version</th>
+                <th>Torrent</th>
+                <th class="hide-on-med-down">Size</th>
+                <th class="hide-on-small-only">SHA1sum</th>
+            </tr>
+            <tbody>
+                {% assign isos = site.data.torrents | where:'cat', 'I' %}
+                {% for iso in isos %}
+                <tr>
+                    <td><a href="{{ iso.url }}"
+                            itemprop="fileFormat" type="application/x-iso9660-image">{{ iso.name }}</a></td>
+                    <td itemprop="datePublished" class="hide-on-med-down">{{ iso.date }}</td>
+                    <td><a href="{{ iso.torrent }}" itemprop="fileFormat"
+                            type="application/octet-stream">Torrent</a></td>
+                    <td class="hide-on-med-down">{{ iso.size }}</td>
+                    <td class="hide-on-small-only">{{ iso.sha1sum }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <p>
+            Do not use UNetBootIn to write ISO files to flashdrives. UNetBootIn modifies the bootloader configuration,
+            which is bad.
+            You can use this instead (where /dev/sdX is your flashdrive and file.iso is a CynuxSecurity ISO):
+        </p>
+{% highlight bash %}
+sudo dd bs=512M if=file.iso of=/dev/sdX
+{% endhighlight %}
+        </code>
+        <blockquote>
+            The default login for all ISOs is: <strong>root:cynuxsecurity</strong>
+        </blockquote>
+    </div>
+</div>
+<div class="section">
+    <div class="container">
+        <a class="anchor" id="ova-download"></a>
+        <h5 class="header red-text">OVA Images</h5>
+        <p itemprop="about">
+            The following list contains official CynuxSecurity (x86_64) OVA images. You can run these images in Virtualbox,
+            VMware and QEMU. If possible, please try to use a mirror near you to download the OVA images. You can find
+            a <a href="#mirror-list">list of mirrors</a> below.
+        </p>
+        <table class="table">
+            <tr>
+                <th>Image</th>
+                <th class="hide-on-med-down">Version</th>
+                <th>Torrent</th>
+                <th class="hide-on-med-down">Size</th>
+                <th class="hide-on-small-only">SHA1sum</th>
+            </tr>
+            {% assign ovas = site.data.torrents | where:'cat', 'O' %}
+                {% for ova in ovas %}
+                <tr>
+                    <td><a href="{{ ova.url }}"
+                            itemprop="fileFormat" type="application/x-iso9660-image">{{ ova.name }}</a></td>
+                    <td itemprop="datePublished" class="hide-on-med-down">{{ ova.date }}</td>
+                    <td><a href="{{ ova.torrent }}" itemprop="fileFormat"
+                            type="application/octet-stream">Torrent</a></td>
+                    <td class="hide-on-med-down">{{ ova.size }}</td>
+                    <td class="hide-on-small-only">{{ ova.sha1sum }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+        <blockquote>
+            The default login for all OVA images is: <strong>root:cynuxsecurity</strong>
+        </blockquote>
+    </div>
+</div>
+<div class="section">
+    <div class="container">
+        <a class="anchor" id="mirror-list"></a>
+        <h5 class="header red-text">Mirrors</h5>
+        <p>
+            {% assign sorted_countries = site.data.mirrors | group_by: 'country' %}
+            {% for country in sorted_countries %}
+            {% assign img = country.items[0].abbr %}
+            <img src="/images/flags/{{ img }}.png" alt="{{country.name}}" /> {{country.name }}<br>
+            {% for item in country.items %}
+            <a href="{{ item.url }}">{{ item.url }}</a><br>
+            {% endfor %}
+            <br>
+            {% endfor %}
+
+        </p>
+    </div>
+</div>
+</div>

@@ -1,0 +1,20 @@
+---
+layout: null
+---
+{% assign packages = site.data.packages | sort: 'build' | reverse %}[{% for member in packages %}
+  {
+    "title": "{{ member.name }}","type": "package","version": "{{ member.vers}}",
+    "categories": [{% assign cats = member.group | split: ';' %}{% for cat in cats %}{% assign caturl = '/packages/' | append: cat | append: '.html' %}
+      {
+        "url": "{{ caturl | absolute_url }}",
+        "name":"{{ cat }}"
+      }{% unless forloop.last %},{% endunless %}{% endfor %}
+    ],
+    "description": "{{ member.desc | escape }}","url": "{{ member.url }}","date": "{{ member.build | date: "%Y-%m-%dT%H:%M:%S.000Z"}}"
+  },{% endfor %}{% for post in site.posts %}
+  {
+    "title": "{{ post.title | xml_escape }}","type": "post","categories": [{"name": "{{ post.category | xml_escape }}"}],
+    "description": {{ post.content | strip_html | strip_newlines | remove: "  " | jsonify }},
+    "url": "{{ post.url | xml_escape }}"
+  }{% unless forloop.last %},{% endunless %}{% endfor %}
+]

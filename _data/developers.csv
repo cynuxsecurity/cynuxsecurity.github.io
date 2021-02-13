@@ -1,0 +1,3 @@
+status,name,nick,email,gpg,hex,role
+A,Argenestel,Argenestel,argenestel@cynuxsecurity.org,"gpgkeys/argenestel.asc",0x41414141,"Developer, Creator"
+A,groot,groot,groot@cynuxsecurity.org,"gpgkeys/groot.asc",,"Developer, Torrent Master"

@@ -1,0 +1,51 @@
+---
+layout: contained
+seo-title: Support to CynuxSecurity
+title: Support
+subtitle: Support Us
+id: donate
+icon: fa-heart
+nav: true
+position: 7
+permalink: supportus.html
+seo: Help us to build the project by giving a donation today
+description: To be entirely transparent, we will display every donation here.
+---
+
+<p>If you made a donation and wish to see your name and/or the link <i>(hard backlink)</i> of your website or organization displayed, email us or speak to us trough our IRC channel. In case we receive a donation and nobody claimed it, we will display it as Anonymous</p>
+{% assign donors = site.data.donors %}
+<table id="tbl-minimalist" class="table is-full-width">
+	<thead>
+		<tr>
+			<th class="tbl-name">Name</th>
+			<th class="tbl-dversion">Amount</th>
+			<th class="tbl-ddescription">Date</th>
+		</tr>
+	</thead>
+	<tbody>
+	{% for donor in donors %}
+		<tr>
+			<td class="tbl-name">{{ donor.name }}</td>
+			<td class="tbl-dversion vcat">{{ donor.ammount }}</td>
+			<td class="tbl-ddescription dcat">{{ donor.date}}</td>
+		</tr>
+	{% endfor %}
+	</tbody>
+</table>
+<p><i>Support are listed here since 2020</i></p>
+<h5 class="header red-text">Contribute</h5>
+<p>
+	CynuxSecurity is entirely free and open source. The team-members work in their free time (voluntary). Despite the large amount of the time spent every day. Another thing that this project requires to keep moving forward is donations. For instance, the hosting of the website, domain name, download mirror,
+	testing hardware... isn't free.
+</p>
+<p>
+	Every donation, even the most modest, is a great help and will be used only to pay for cynuxsecurity expenses, and fund the future developemnt of the project. We appreciate your interest
+	in this project as we continue to develop cynuxsecurity.
+</p>
+<p>
+	There are many ways to help us. Money is of course a must. But, if you can't give a financial contribution, you may help in another way. For example: translating, offering support to users in need (in IRC), or anything that can help improve cynuxsecurity. Also, a simple star of the cynuxsecurity repository on Github goes a long way... :D
+</p>
+<p>
+	We also welcome any organization/company interested in becoming an official sponsor of CynuxSecurity. You can contact us by IRC or by email.
+	For more information check github.
+</p>

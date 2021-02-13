@@ -1,0 +1,20 @@
+<head>
+    <meta charset="UTF-8">
+    {% if page.seo %}
+    <meta name="description" content="{{ page.seo }}">
+    {% else %}
+    <meta name="description" content="{{ page.description }}">
+    {% endif %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ '/images/favicon.ico' | relative_url }}">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="{{ '/css/materialize.css' | relative_url }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1"
+        crossorigin="anonymous">
+    <link href="{{ '/css/cynuxsecurity.css' | relative_url }}" rel="stylesheet">
+    {% if page.seo-title %}
+    <title>{{ page.seo-title }}</title>
+    {% else %}
+    <title>{{ page.title }}</title>
+    {% endif %}
+</head>

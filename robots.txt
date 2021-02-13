@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /cynuxsecurity/
+Disallow: /css/
+Disallow: /data/
+Disallow: /gpgkeys/
+Disallow: /images/
+Disallow: /js/
