@@ -1,6 +1,6 @@
 ---
 layout: contained
-title: Faq
+title: FAQ
 seo-title: FAQ - Frequently asked questions
 subtitle: Frequently Asked Questions
 id: faq
