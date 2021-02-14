@@ -1,0 +1,30 @@
+<!-- Header Carousel -->
+{% if page.carousel %}
+<header id="header-carousel" class="carousel carousel-slider center" style="background-color:#fff;">
+    {% assign slide1 = 'images/slider/ba-slider.png' | relative_url %}
+    <div class="carousel-item active" style="background-image:url('{{ slide1 }}');background-position:center;background-size:cover;background-color:#000;">
+        <div class="carousel-caption carousel-fixed-item">
+          <h2 style="background-color:#91FFFF;"><font color="000">CynuxSecurity: Arch Based Pentesting Distro</font></h2>
+        </div>
+    </div>
+    {% assign slide2 = 'images/slider/ba-slider2.png' | relative_url %}
+    <div class="carousel-item" style="background-image:url('{{ slide2 }}');background-position:center;background-size:cover;background-color:#000;">
+        <div class="carousel-caption carousel-fixed-item">
+          <!--  <h2>{{ site.data.packages.size }} packages available</h2> -->
+          <h2 style="background-color:#91FFFF;"><font color="000">200+ Tools</font></h2>
+        </div>
+    </div>
+    {% assign slide3 = 'images/slider/ba-slider3.png' | relative_url %}
+    <div class="carousel-item" style="background-image:url('{{ slide3 }}');background-position:center;background-size:cover;background-color:#000;">
+        <div class="carousel-caption carousel-fixed-item">
+            <h2 style="background-color:#91FFFF;"><font color="000">Beginner Friendly</font></h2>
+        </div>
+    </div>
+    {% assign slide4 = 'images/slider/ba-slider4.png' | relative_url %}
+    <div class="carousel-item" style="background-image:url('{{ slide4 }}');background-position:center;background-size:cover;background-color:#000;">
+        <div class="carousel-caption carousel-fixed-item">
+          <h2 style="background-color:#91FFFF;"><font color="000">Clean and Beautiful</font></h2>
+        </div>
+    </div>
+</header>
+{% endif %}

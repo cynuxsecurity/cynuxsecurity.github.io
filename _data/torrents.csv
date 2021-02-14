@@ -1,0 +1,3 @@
+cat,name,kind,date,type,architecture,sha1sum,size,url.torrent
+O,CynuxSecurity Linux 64 bit OVA Image,,2021.0.1,ova,,,4GB,"","https://www.cynuxsecurity.org/cynuxsecurity/torrent/cynuxsecurity-linux-2019.06.01.ova.torrent"
+I,CynuxSecurity Linux 64 bit Live ISO,live,2021.0.1,iso,amd64,,3.1GB,"","https://www.cynuxsecurity.org/cynuxsecurity/torrent/cynuxsecurity-linux-live-2019.06.01-x86_64.iso.torrent"

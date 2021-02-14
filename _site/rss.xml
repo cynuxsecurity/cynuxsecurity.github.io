@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cynuxsecurity blog</title>
+    <description>News and information for cynuxsecurity</description>
+    <link>https://cynuxsecurity.org</link>
+    <atom:link href="https://cynuxsecurity.org/atom.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 13 Feb 2021 18:27:03 +0530</pubDate>
+    <lastBuildDate>Sat, 13 Feb 2021 18:27:03 +0530</lastBuildDate>
+    
+      <item>
+        <title>Mirror in US</title>
+        <description>&lt;p&gt;Mirror is available at http://mirror.cynuxsecurity.org&lt;/p&gt;
+</description>
+        <pubDate>Wed, 10 Feb 2021 00:00:00 +0530</pubDate>
+        <link>https://cynuxsecurity.org/mirror/2021/02/10/new-mirror.html</link>
+        <guid isPermaLink="true">https://cynuxsecurity.org/mirror/2021/02/10/new-mirror.html</guid>
+        
+        
+        <category>mirror</category>
+        
+      </item>
+    
+      <item>
+        <title>ISO and OVA release</title>
+        <description>&lt;p&gt;Today we released the new CynuxSecurity Linux ISOs and OVA image. For details see the ChangeLog below.&lt;/p&gt;
+
+&lt;p&gt;Here’s the ChangeLog:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;New GUI installer&lt;/li&gt;
+  &lt;li&gt;updated cynuxsecurity-installer to v0.1&lt;/li&gt;
+  &lt;li&gt;updated all cynuxsecurity tools and packages including config files&lt;/li&gt;
+  &lt;li&gt;updated all system packages&lt;/li&gt;
+  &lt;li&gt;updated UI&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We wish to thank all of CynuxSecurity’s users, mirrors, and supporters. Thanks for your help.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 20 Jan 2021 00:00:00 +0530</pubDate>
+        <link>https://cynuxsecurity.org/iso/2021/01/20/iso-released.html</link>
+        <guid isPermaLink="true">https://cynuxsecurity.org/iso/2021/01/20/iso-released.html</guid>
+        
+        
+        <category>iso</category>
+        
+      </item>
+    
+  </channel>
+</rss>

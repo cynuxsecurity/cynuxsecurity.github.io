@@ -1,0 +1,54 @@
+---
+layout: default
+seo-title: Get the Last news
+title: Blog
+subtitle: News of CynuxSecurity
+id: blog
+icon: fa-th
+nav: true
+position: 6
+permalink: blog.html
+seo: News about the project CynuxSecurity Linux
+description: Our blog is used to inform you about updates, releases and general news.
+---
+<div class="section">
+        <div class="container">
+    {% for post in site.posts %}
+    <div class="card black">
+            <div class="card-content">
+            <span class="card-title red-text">
+                <!--<a href="{{ post.url }}">-->{{ post.title }}<!--</a>-->
+            </span>
+            
+            <div class="content">
+                {{ post.content }}
+            </div>
+            <br/>
+            <p class="light date">
+                {{ post.date | date: "%a, %b %d %Y" }}
+            </p>
+            </div>
+    </div>
+
+    {% endfor %}
+</div>
+</div>
+    <!--<div class="col-md-4">
+                <div style="border: 1px solid #aaa; border-radius:5px; height:420px;">
+                    <a class="twitter-timeline" href="https://twitter.com/cynuxsecuritylinux" data-widget-id="368746180060004352" data-theme="dark">Tweets by @cynuxsecuritylinux</a>
+                    <script>
+                        !function(d,s,id) {
+                            var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+                            if(!d.getElementById(id)) {
+                                js=d.createElement(s);
+                                js.id=id;
+                                js.src=p+"://platform.twitter.com/widgets.js";
+                                fjs.parentNode.insertBefore(js,fjs);
+                            }
+                        }
+                        (document,"script","twitter-wjs");
+                    </script>
+                </div>
+            </div>
+    </div>-->
+        

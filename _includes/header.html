@@ -1,0 +1,71 @@
+<div class="navbar-fixed">
+    <nav role="navigation" class="black nav-extended">
+        <div class="nav-wrapper">
+                <a class="brand-logo" href="/#!">
+                    <img src="{{ 'images/logo/cynuxsecurity-logo-red-scalable.svg' | relative_url }}" alt="CynuxSecurity Logo"
+                        class="hide-on-small-only">
+                    <img src="{{ 'images/logo/cynuxsecurity-logo-red-scalable-no-text.svg' | relative_url }}" alt="CynuxSecurity Logo"
+                        class="show-on-small hide-on-med-and-up">
+                </a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul id="nav" class="right hide-on-med-and-down">
+                    {% assign navigation_pages = site.pages | where: 'nav', "true" | sort: 'position' %}
+                    {% for node in navigation_pages %}
+                    {% if node.nav %}
+                    {% if page.url == node.url %}
+                    <li class="active"><a class="navbar-item selected" itemprop="url">{{node.id | capitalize }}</a></li>
+                    {% else %}
+                    <li><a class="navbar-item" itemprop="url" href="{{node.url | relative_url }}">{{node.id | capitalize }}</a></li>
+                    {% endif %}
+                    {% endif %}
+                    {% endfor %}
+                    <li class="hide"><a class="dropdown-trigger" href="#" data-target="dropdown1">Categories<i class="material-icons right">arrow_drop_down</i></a></li>
+                </ul>
+                <ul id="mobile-demo" class="sidenav">
+                    <li class="logo">
+                        <a id="logo-container" href="/" class="brand-logo">
+                            <object id="front-page-logo" type="image/svg+xml" data="images/logo/cynuxsecurity-logo-red-scalable-no-text.svg">Your browser does not support SVG</object>
+                        </a>
+                        <div class="sidenav-title">Cynux<span class="red-text">Security</span></div>
+                    </li>
+                    {% assign navigation_pages = site.pages | where: 'nav', "true" | sort: 'position' %}
+                    {% for node in navigation_pages %}
+                        {% if node.nav %}
+                            {% if node.tabs %}
+                            <li class="no-padding">
+                                <ul class="collapsible collapsible-accordion">
+                                    <li>
+                                    <a class="collapsible-header">{{ node.id | capitalize }}</a>
+                                    <div class="collapsible-body">
+                                        <ul>
+                                            {% for sub in node.tabs %}
+                                                <li class="sub"><a href="{{node.url | relative_url }}#{{ sub.link }}">{{ sub.name }}</a></li>
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            {% else %}
+                                {% if page.url == node.url %}
+                                    <li class="active"><a class="red">{{node.id | capitalize }}</a></li>
+                                {% else %}
+                                    <li><a href="{{node.url | relative_url }}">{{node.id | capitalize }}</a></li>
+                                {% endif %}
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+        </div>
+        {% if page.tabs %}
+        <div class="nav-content hide-on-small-only">
+            <ul class="tabs tabs-transparent">
+            {% for tab in page.tabs %}
+                <li class="tab"><a href="#{{ tab.link }}">{{ tab.name }}</a></li>
+            {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+    </nav>
+</div>
+{% include carousel.html %}

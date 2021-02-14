@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+  <body>
+  {% include header.html %}
+    {% assign groupname = page.group %}
+    {% if page.id != 'packages' %}
+    {% assign packages = site.data.packages | where:'group', groupname | sort: 'build' | reverse  %}
+    {% else %}
+    {% assign packages = site.data.packages | sort: 'build' | reverse %}
+    {% endif %}
+
+    <div class="section black lighten-4">
+        <div class="container">
+            <h1 class="header red-text hide-on-small-only">
+                {{ page.title }}
+            </h1>
+            <h3 class="header red-text show-on-small hide-on-med-and-up">
+                {{ page.title }}
+            </h3>
+            <h5 class="header light">
+            {{ packages.size }} packages
+            </h5>
+            <div class="row">
+                {{ content }}
+                <span class="left new badge grey lighten-4" data-badge-caption=""><a class="red-text" href="{{ '/packages' | relative_url }}" title="All">All</a></span>
+                {% assign sorted_packages = site.packages | sort: 'title' %}
+                {% for package in sorted_packages %}
+                    {% assign caturl = '' | append: package.id | append: '.html' %}
+
+                    {% if page.id == package.id %}
+                        <span class="left new badge red lighten-2" data-badge-caption=""><span class="white-text">{{ package.title | capitalize }}</span></span>
+                    {% else %}
+                        <span class="left new badge grey lighten-4" data-badge-caption=""><a class="orange-text" href="{{ caturl | relative_url }}" title="{{ package.title }}">{{ package.title | capitalize }}</a></span>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th class="tbl-name">Package</th>
+                    <th class="tbl-version hide-on-small-only">Version</th>
+                    <th class="tbl-build hide-on-med-and-down">Build</th>
+                    <th class="tbl-description hide-on-small-only">Description</th>
+                    {% if page.id == 'packages' %}
+                    <th class="tbl-categorie hide-on-med-and-down">Category</th>
+                    {% endif %}
+                    <th class="tbl-homepage hide-on-small-only">Website</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                {% for member in packages %}
+                {% assign github = member.url | slice: 0,14 %}
+
+                <tr>
+                    <td class="tbl-name" itemprop="name">
+                        <span><b><a href="{{ member.url }}" target="_blank">{{ member.name }}</a></b></span>
+                        <span class="hide-on-med-and-up">
+                            {% if github == 'https://github' %}
+                            <a href="{{ member.url }}" target="_blank"><i class="fab fa-github" style="color:#4BA6E7"></i></a>
+                            {% else %}
+                            <a href="{{ member.url }}" target="_blank"><i class="fas fa-globe" style="color:#4BA6E7"></i></a>
+                            {% endif %}
+                        </span>
+                        <div class="show-on-small hide-on-med-and-up">
+                            <p>{{ member.desc }}</p>
+                            <p><small>version: <i class="vcat">{{ member.vers }}</i> date: <i class="red-text">{{ member.build | date: "%Y-%m-%d" }}</i></small></p>
+                        </div>
+                    </td>
+                    <td class="tbl-version hide-on-small-only vcat" itemprop="version">{{ member.vers }}</td>
+                    <td class="tbl-build hide-on-med-and-down red-text" itemprop="build">{{ member.build | date: "%Y-%m-%d" }}</td>
+                    <td class="tbl-description hide-on-small-only" itemprop="description">{{ member.desc}}</td>
+                    
+                    {% if page.id == 'packages' %}
+                    <td class="tbl-categorie hide-on-med-and-down" itemprop="genre">
+                        {% assign cats = member.group | split: ';' %}
+                        {% for cat in cats %}
+                            {% assign caturl = '/packages/' | append: cat | append: '.html' %}
+                            <span class="new badge grey lighten-4" data-badge-caption=""><a class="orange-text" href="{{ caturl | relative_url }}" title="{{ cat }}">{{ cat | capitalize }}</a></span>
+                        {% endfor %}
+                    </td>
+                    {% endif %}
+                    <td class="tbl-homepage centered hide-on-small-only" itemprop="mainEntityOfPage">
+                            {% if github == 'https://github' %}
+                            <a href="{{ member.url }}" target="_blank"><i class="fab fa-github" style="color:#4BA6E7"></i></a>
+                            {% else %}
+                            <a href="{{ member.url }}" target="_blank"><i class="fas fa-globe" style="color:#4BA6E7"></i></a>
+                            {% endif %}
+                    </td>
+                </tr>
+                
+                
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+  {% include footer.html %}
+  </body>
+</html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="description" content="Downloads the netinstall or the live iso by torrent, http or ftp">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="/css/materialize.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1"
+        crossorigin="anonymous">
+    <link href="/css/cynuxsecurity.css" rel="stylesheet">
+    
+    <title>Download CynuxSecurity</title>
+    
+</head>
+  <body>
+  <div class="navbar-fixed">
+    <nav role="navigation" class="black nav-extended">
+        <div class="nav-wrapper">
+                <a class="brand-logo" href="/#!">
+                    <img src="/images/logo/cynuxsecurity-logo-red-scalable.svg" alt="CynuxSecurity Logo"
+                        class="hide-on-small-only">
+                    <img src="/images/logo/cynuxsecurity-logo-red-scalable-no-text.svg" alt="CynuxSecurity Logo"
+                        class="show-on-small hide-on-med-and-up">
+                </a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul id="nav" class="right hide-on-med-and-down">
+                    
+                    
+                    
+                    
+                    <li><a class="navbar-item" itemprop="url" href="/">Home</a></li>
+                    
+                    
+                    
+                    
+                    
+                    <li class="active"><a class="navbar-item selected" itemprop="url">Downloads</a></li>
+                    
+                    
+                    
+                    
+                    
+                    <li><a class="navbar-item" itemprop="url" href="/guide.html">Guide</a></li>
+                    
+                    
+                    
+                    
+                    
+                    <li><a class="navbar-item" itemprop="url" href="/faq.html">Faq</a></li>
+                    
+                    
+                    
+                    
+                    
+                    <li><a class="navbar-item" itemprop="url" href="/packages.html">Packages</a></li>
+                    
+                    
+                    
+                    
+                    
+                    <li><a class="navbar-item" itemprop="url" href="/community.html">Community</a></li>
+                    
+                    
+                    
+                    
+                    
+                    <li><a class="navbar-item" itemprop="url" href="/blog.html">Blog</a></li>
+                    
+                    
+                    
+                    
+                    
+                    <li><a class="navbar-item" itemprop="url" href="/supportus.html">Donate</a></li>
+                    
+                    
+                    
+                    <li class="hide"><a class="dropdown-trigger" href="#" data-target="dropdown1">Categories<i class="material-icons right">arrow_drop_down</i></a></li>
+                </ul>
+                <ul id="mobile-demo" class="sidenav">
+                    <li class="logo">
+                        <a id="logo-container" href="/" class="brand-logo">
+                            <object id="front-page-logo" type="image/svg+xml" data="images/logo/cynuxsecurity-logo-red-scalable-no-text.svg">Your browser does not support SVG</object>
+                        </a>
+                        <div class="sidenav-title">Cynux<span class="red-text">Security</span></div>
+                    </li>
+                    
+                    
+                        
+                            
+                                
+                                    <li><a href="/">Home</a></li>
+                                
+                            
+                        
+                    
+                        
+                            
+                            <li class="no-padding">
+                                <ul class="collapsible collapsible-accordion">
+                                    <li>
+                                    <a class="collapsible-header">Downloads</a>
+                                    <div class="collapsible-body">
+                                        <ul>
+                                            
+                                                <li class="sub"><a href="/download.html#iso-download">LiveISOs</a></li>
+                                            
+                                                <li class="sub"><a href="/download.html#ova-download">OVA Images</a></li>
+                                            
+                                                <li class="sub"><a href="/download.html#mirror-list">Mirrors</a></li>
+                                            
+                                        </ul>
+                                    </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            
+                        
+                    
+                        
+                            
+                                
+                                    <li><a href="/guide.html">Guide</a></li>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                    <li><a href="/faq.html">Faq</a></li>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                    <li><a href="/packages.html">Packages</a></li>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                    <li><a href="/community.html">Community</a></li>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                    <li><a href="/blog.html">Blog</a></li>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                    <li><a href="/supportus.html">Donate</a></li>
+                                
+                            
+                        
+                    
+                </ul>
+        </div>
+        
+        <div class="nav-content hide-on-small-only">
+            <ul class="tabs tabs-transparent">
+            
+                <li class="tab"><a href="#iso-download">LiveISOs</a></li>
+            
+                <li class="tab"><a href="#ova-download">OVA Images</a></li>
+            
+                <li class="tab"><a href="#mirror-list">Mirrors</a></li>
+            
+            </ul>
+        </div>
+        
+    </nav>
+</div>
+<!-- Header Carousel -->
+
+
+
+   <div class="section hero black lighten-4">
+        <div class="container">
+            <h1 class="header red-text">
+                Download CynuxSecurity
+            </h1>
+            <h5 class="header light">
+                CynuxSecurity iso
+            </h5>
+            <div class="row">
+                Here you will find official CynuxSecurity downloads and installation instructions.
+            </div>
+            
+        </div>
+    </div>
+    
+    <div class="section">
+    <div class="container">
+        <a class="anchor" id="iso-download"></a>
+        <h5 class="header red-text">Live ISOs</h5>
+        <p itemprop="about">
+            The following list contains official CynuxSecurity live and netinstall ISO images. You can burn these images to
+            DVDs and flashdrives.
+            The live ISO contains a complete, functional CynuxSecurity system. The netinstall ISO is a lightweight image
+            for bootstrapping machines.
+            If possible, please try to use a mirror near you to download the ISOs. You can find a <a href="#mirror-list">list
+                of mirrors</a> below.
+        </p>
+        <table class="table">
+            <tr>
+                <th>Image</th>
+                <th class="hide-on-med-down">Version</th>
+                <th>Torrent</th>
+                <th class="hide-on-med-down">Size</th>
+                <th class="hide-on-small-only">SHA1sum</th>
+            </tr>
+            <tbody>
+                
+                
+                <tr>
+                    <td><a href=""
+                            itemprop="fileFormat" type="application/x-iso9660-image">CynuxSecurity Linux 64 bit Live ISO</a></td>
+                    <td itemprop="datePublished" class="hide-on-med-down">2021.0.1</td>
+                    <td><a href="" itemprop="fileFormat"
+                            type="application/octet-stream">Torrent</a></td>
+                    <td class="hide-on-med-down">3.1GB</td>
+                    <td class="hide-on-small-only"></td>
+                </tr>
+                
+            </tbody>
+        </table>
+        <p>
+            Do not use UNetBootIn to write ISO files to flashdrives. UNetBootIn modifies the bootloader configuration,
+            which is bad.
+            You can use this instead (where /dev/sdX is your flashdrive and file.iso is a CynuxSecurity ISO):
+        </p>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo dd </span><span class="nv">bs</span><span class="o">=</span>512M <span class="k">if</span><span class="o">=</span>file.iso <span class="nv">of</span><span class="o">=</span>/dev/sdX</code></pre></figure>
+        </code>
+        <blockquote>
+            The default login for all ISOs is: <strong>root:cynuxsecurity</strong>
+        </blockquote>
+    </div>
+</div>
+<div class="section">
+    <div class="container">
+        <a class="anchor" id="ova-download"></a>
+        <h5 class="header red-text">OVA Images</h5>
+        <p itemprop="about">
+            The following list contains official CynuxSecurity (x86_64) OVA images. You can run these images in Virtualbox,
+            VMware and QEMU. If possible, please try to use a mirror near you to download the OVA images. You can find
+            a <a href="#mirror-list">list of mirrors</a> below.
+        </p>
+        <table class="table">
+            <tr>
+                <th>Image</th>
+                <th class="hide-on-med-down">Version</th>
+                <th>Torrent</th>
+                <th class="hide-on-med-down">Size</th>
+                <th class="hide-on-small-only">SHA1sum</th>
+            </tr>
+            
+                
+                <tr>
+                    <td><a href=""
+                            itemprop="fileFormat" type="application/x-iso9660-image">CynuxSecurity Linux 64 bit OVA Image</a></td>
+                    <td itemprop="datePublished" class="hide-on-med-down">2021.0.1</td>
+                    <td><a href="" itemprop="fileFormat"
+                            type="application/octet-stream">Torrent</a></td>
+                    <td class="hide-on-med-down">4GB</td>
+                    <td class="hide-on-small-only"></td>
+                </tr>
+            
+        </table>
+        <blockquote>
+            The default login for all OVA images is: <strong>root:cynuxsecurity</strong>
+        </blockquote>
+    </div>
+</div>
+<div class="section">
+    <div class="container">
+        <a class="anchor" id="mirror-list"></a>
+        <h5 class="header red-text">Mirrors</h5>
+        <p>
+            
+            
+            
+            <img src="/images/flags/us.png" alt="United States" /> United States<br>
+            
+            <a href="http://mirror.cynuxsecurity.org/">http://mirror.cynuxsecurity.org/</a><br>
+            
+            <br>
+            
+
+        </p>
+    </div>
+</div>
+</div>
+
+      <!-- Footer -->
+  <footer class="page-footer black darken-4">
+      <div class="container">
+          <div class="row center">
+            <div class="col s12">
+                <a itemprop="sameAs" href="https://github.com/CynuxSecurity" title="Github" target=_blank><i class="fab fa-github" aria-hidden="true"></i></a>
+                <a itemprop="sameAs" href="https://twitter.com/cynuxsecuritylinux" title="Twitter" target=_blank><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                <a itemprop="sameAs" href="https://www.youtube.com/" title="Youtube" target=_blank><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                <a itemprop="sameAs" href="" title="discord" target=_blank><i class="fas fa-comments" aria-hidden="true"></i></a>
+                <a itemprop="sameAs" href="https://cynuxsecurity.org/blog.html" title="Blog" target=_blank><i class="fas fa-newspaper" aria-hidden="true"></i></a>
+                <a itemprop="sameAs" href="https://cynuxsecurity.org/rss.xml" title="Rss" target=_blank><i class="fas fa-rss" aria-hidden="true"></i></a>
+            </div>
+          </div>
+      </div>
+      <div class="footer-copyright black">
+          <div class="container">
+            <div class="row center">
+              <div class="col s12">
+                CynuxSecurity Linux 2020 - 2021
+              </div>
+            </div>
+          </div>
+      </div>
+  </footer>
+  <!-- End Footer -->
+      <!-- Javascript -->
+
+    <script type="text/javascript" src="/js/materialize.min.js"></script>
+    <script type="text/javascript" src="/js/cynuxsecurity.js"></script>
+
+
+  </body>
+</html>

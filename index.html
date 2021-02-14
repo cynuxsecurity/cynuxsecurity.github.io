@@ -1,0 +1,117 @@
+---
+layout: default
+title: CynuxSecurity
+subtitle: Fast and Flexible Penetration Testing Distribution.
+seo-title: CynuxSecurity Linux - Penetration Testing Distribution
+seo: Cynuxsecurity Linux is a fast, beginner friendly and Flexible Arch Linux for penetration testers.
+id: home
+icon: fa-home
+nav: true
+position: 0
+description: Powered by Arch Linux and Students.
+link: Download
+carousel: true
+---
+<div class="section">
+    <div class="container">
+  <p>
+      CynuxsecurityOS is <a href="http://www.archlinux.org/" target="_blank">Arch Linux</a> based Penetration Testing Distribution made for beginners.
+      Based on <a href="http://www.archlinux.org/" target="_blank">Arch Linux</a>, CynuxSecurity is the advanced penetration testing distribution.
+      Our repository contains <a href="packages.html">{{ site.data.packages.size }}</a> packages selected by our community. Packages that can be install individually or in groups.
+      CynuxSecurityOS is compatible with existing Arch Linux installations. For more information, see the <a href="downloads.html#install-repo">installation instructions</a>.
+      Updates will be present in <a href="blog.html">blog</a>. CynuxsecurityOS is a community effort, feel free to join! To report bugs and request new packages, please visit the
+      <a href="https://github.com/cynuxsecurity/CynuxSecurity/issues" target="_blank">issue tracker</a> on Github
+      stop by <a href="community.html">IRC</a>, or
+      <a href="mailto:team@cynuxsecurity.org">email</a> us.
+      The CynuxSecurity Live ISO contains multiple window managers. Check out the screenshots.
+  </p>
+</div>
+</div>
+<div class="section">
+<div class="container">
+  <h5 class="header red-text">Latest News</h5>
+  <div class="row">
+    {% for post in site.posts limit: 4 %}
+    <div class="col s12 m6 l3">
+      <div class="card small black" style="padding-top:5%;">
+      <div class="icon-block {{ post.category }}" >
+        <h2 class="center grey-text lighten-1">
+          <i class="{{ post.icon }}"></i>
+        </h2>
+        <h5 class="center">
+            <a href="{{ post.url }}">{{ post.title }}</a>
+        </h5>
+        <p class="light center">
+          {{ post.date | date: "%a, %b %d %Y" }}
+        </p>
+      </div>
+    </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+</div>
+<div class="section">
+<div class="container">
+  <h5 class="header red-text">Team</h5>
+  <p>
+      CynuxSecurity linux is backed by a team of volunteers. Some of them have chosen to appear in the following list.
+  </p>
+  <table class="table">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Nickname</th>
+              <th class="hide-on-med-and-down">E-Mail</th>
+              <th class=" hide-on-small-only">GPG Key</th>
+              <th>Role</th>
+          </tr>
+      </thead>
+      <tbody>
+      {% assign devs = site.data.developers | where:'status', 'A' %}
+      {% for member in devs %}
+          <tr>
+              <td itemprop="givenName">{{ member.name }}</td>
+              <td itemprop="additionalName">{{ member.nick }}</td>
+              <td class="hide-on-med-and-down" itemprop="email"><a href="mailto://{{ member.email }}">{{ member.email }}</a></td>
+              <td class=" hide-on-small-only"><a href="{{ member.gpg }}" target="_blank" class="red-text">{{ member.hex }}</a></td>
+              <td itemprop="jobTitle">{{ member.role }}</td>
+          </tr>
+      {% endfor %}
+      </tbody>
+  </table>
+</div>
+</div>
+<div class="section">
+    <div class="container">
+      <h5 class="header red-text">Hall of Fame</h5>
+      <p>
+          CynuxSecurity linux stands on the shoulders of giants. This is a list of former Developers & Contributors without who CynuxSecurity linux would not be what it is today.
+      </p>
+      <table class="table">
+          <thead>
+              <tr>
+                  <th></th>
+                  <th>Name</th>
+                  <th>Nickname</th>
+                  <!--<th class="hide-on-med-and-down">E-Mail</th>-->
+                  <!--<th class=" hide-on-small-only">GPG Key</th>-->
+                  <th>Former role</th>
+              </tr>
+          </thead>
+          <tbody>
+          {% assign devs = site.data.developers | where:'status', 'F' %}
+          {% for member in devs %}
+              <tr>
+                  <td class="orange-text"><i class="fas fa-star" aria-hidden="true"></i></td>
+                  <td itemprop="givenName">{{ member.name }}</td>
+                  <td itemprop="additionalName">{{ member.nick }}</td>
+                  <!--<td class="hide-on-med-and-down" itemprop="email"><a href="mailto://{{ member.email }}">{{ member.email }}</a></td>-->
+                  <!--<td class=" hide-on-small-only"><a href="{{ member.gpg }}" target="_blank">{{ member.hex }}</a></td>-->
+                  <td itemprop="jobTitle">{{ member.role }}</td>
+              </tr>
+          {% endfor %}
+          </tbody>
+      </table>
+    </div>
+    </div>
