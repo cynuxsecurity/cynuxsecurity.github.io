@@ -41,7 +41,7 @@ description: Here you will find official CynuxSecurity downloads and installatio
                 {% assign isos = site.data.torrents | where:'cat', 'I' %}
                 {% for iso in isos %}
                 <tr>
-                    <td><a href="{{ iso.url }}"
+                    <td><a href="https://sourceforge.net/projects/cynuxsecurity/files/latest/download"
                             itemprop="fileFormat" type="application/x-iso9660-image">{{ iso.name }}</a></td>
                     <td itemprop="datePublished" class="hide-on-med-down">{{ iso.date }}</td>
                     <td><a href="{{ iso.torrent }}" itemprop="fileFormat"
@@ -62,7 +62,7 @@ sudo dd bs=512M if=file.iso of=/dev/sdX
 {% endhighlight %}
         </code>
         <blockquote>
-            The default login for all ISOs is: <strong>root:cynuxsecurity</strong>
+            The default login for all ISOs is: <strong>root/cynux:cynux</strong>
         </blockquote>
     </div>
 </div>
@@ -86,7 +86,7 @@ sudo dd bs=512M if=file.iso of=/dev/sdX
             {% assign ovas = site.data.torrents | where:'cat', 'O' %}
                 {% for ova in ovas %}
                 <tr>
-                    <td><a href="{{ ova.url }}"
+                    <td><a href="https://phoenixnap.dl.sourceforge.net/project/cynuxsecurity/CynuxsecurityOVAs/cynuxsecurity-2021.0.1.ova"
                             itemprop="fileFormat" type="application/x-iso9660-image">{{ ova.name }}</a></td>
                     <td itemprop="datePublished" class="hide-on-med-down">{{ ova.date }}</td>
                     <td><a href="{{ ova.torrent }}" itemprop="fileFormat"
@@ -97,7 +97,7 @@ sudo dd bs=512M if=file.iso of=/dev/sdX
             {% endfor %}
         </table>
         <blockquote>
-            The default login for all OVA images is: <strong>root:cynuxsecurity</strong>
+            The default login for all OVA images is: <strong>cynux:cynux</strong>
         </blockquote>
     </div>
 </div>
